@@ -5,14 +5,15 @@
 
 int main(void)
 {
-	int n[100] = { 0 };
+	int n[100];
 	int i;
 	int N;		//정수의 개수
 	int a;		//입력하는 정수
-	
-	int max = 0;
-	int min = 0;
 
+	int max;
+	int min;
+
+	printf("정수의 개수 ");
 	scanf("%d", &N);
 
 	for (i = 0;i < N;i++) {
@@ -20,16 +21,16 @@ int main(void)
 
 		n[i] = a;
 	}
+	max = n[0];
+	min = n[0];
+
 	for (i = 0;i < N;i++) {
-	
-		max = n[0];
-		min = n[0];
-		
+
 		if (max <= n[i]) {
 			max = n[i];
 		}
-		else if (min >= n[i]) {
-			min = n[i + 1];
+		if (min >= n[i]) {
+			min = n[i];
 		}
 	}
 	printf("%d %d", max, min);
