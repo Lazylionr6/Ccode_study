@@ -20,7 +20,7 @@ int main(void)
 	}
 
 	for (i = 0;i < 4;i++) {
-		for (j = 1;j < 5;j++) {
+		for (j = i + 1;j < 5;j++) {
 			if (N[i] > N[j]) {
 				tmp = N[i];
 				N[i] = N[j];
@@ -33,6 +33,7 @@ int main(void)
 	mid = N[2];
 
 	printf("%d\n%d", avg, mid);
+	return 0;
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
