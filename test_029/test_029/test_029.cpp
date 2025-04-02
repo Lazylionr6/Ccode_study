@@ -24,7 +24,7 @@ int main(void)
 			if (N[i] > N[j]) {
 				tmp = N[i];
 				N[i] = N[j];
-				N[j] = N[i];
+				N[j] = tmp;
 			}
 		}
 	}
@@ -32,7 +32,8 @@ int main(void)
 	avg = sum / 5;
 	mid = N[2];
 
-	printf("%d\n%d", avg, mid);
+	printf("%d\n", avg);
+	printf("%d", mid);
 	return 0;
 }
 
